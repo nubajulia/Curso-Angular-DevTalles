@@ -1,0 +1,28 @@
+<h4>Agregar Raza Caballo</h4>
+
+<form class="row" (ngSubmit)="agregarCaballo()">
+
+  <input
+    type="text"
+    [(ngModel)]="caballo.nombre"
+    name="nombre"
+    class="form-control mb-2"
+    placeholder="Nombre">
+
+  <input
+    type="number"
+    [(ngModel)]="caballo.precio"
+    name="precio"
+    class="form-control mb-2"
+    placeholder="Precio">
+
+  <button
+    type="submit"
+    class="btn btn-primary"
+    (click)="agregarCaballo()">
+    Agregar
+  </button>
+
+  <!--<pre>{{caballo | json}}</pre>-->
+
+</form>

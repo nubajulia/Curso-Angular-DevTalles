@@ -1,23 +1,14 @@
-<h1>Caballos Razas</h1>
+<h1>Caballos</h1>
 <hr>
 
 <div class="row">
   <div class="col">
-    <app-caballos-lista></app-caballos-lista>
+    <app-caballos-lista
+      [caballosList]="caballos"
+      (borrar)="borrarCaballo($event)">
+    </app-caballos-lista>
   </div>
   <div class="col">
-
-    <h4>Agregar Caballo</h4>
-
-    <form class="row">
-
-      <input type="text" class="form-control mb-2" placeholder="Nombre">
-      <input type="text" class="form-control mb-2" placeholder="Precio">
-
-      <button type="submit" class="btn btn-primary">
-        Agregar
-      </button>
-
-    </form>
+    <app-agregar-raza (nuevoCaballo)="nuevoCAballo($event)"></app-agregar-raza>
   </div>
 </div>
