@@ -4,11 +4,11 @@
 <div class="row">
   <div class="col">
     <app-caballos-lista
-      [caballosList]="caballosService.caballos"
-      (borrar)="caballosService.borrarCaballoById($event)">
+      [caballosList]="caballos"
+      (borrar)="borrarCaballoById($event)">
     </app-caballos-lista>
   </div>
   <div class="col">
-    <app-agregar-raza (nuevoCaballo)="caballosService.nuevoCAballo($event)"></app-agregar-raza>
+    <app-agregar-raza (nuevoCaballo)="nuevoCaballo($event)"></app-agregar-raza>
   </div>
 </div>
