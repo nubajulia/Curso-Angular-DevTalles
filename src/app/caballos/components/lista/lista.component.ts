@@ -16,9 +16,11 @@ export class ListaComponent {
   }];
 
   @Output()
-  public borrar: EventEmitter<number> = new EventEmitter();
+  public borrar: EventEmitter<string> = new EventEmitter();
 
-  borrarCaballo(index:number):void{
-    this.borrar.emit(index);
+  borrarCaballo(id?:string):void{
+
+    if(!id) return;
+    this.borrar.emit(id);
   }
 }
